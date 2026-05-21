@@ -17,7 +17,7 @@
   </section>
 
   <section class="section">
-    <h2>Top 3 Tracks</h2>
+    <h2>My Top Tracks</h2>
     <div class="track-grid">
       @for (track of topTracks(); track track.youtubeId) {
         <article class="track-card">
@@ -36,7 +36,7 @@
   </section>
 
   <section class="section fav">
-    <h2>Favorite Track</h2>
+    <h2>And My Favorite</h2>
     <article class="track-card wide">
       <div class="video-wrap">
         <iframe
@@ -55,7 +55,7 @@
     <ul class="contact-list">
       <li><span>Email</span><a [href]="'mailto:' + c.email">{{ c.email }}</a></li>
       <li><span>Instagram</span><a [href]="'https://instagram.com/' + c.instagram.replace('@','')" target="_blank" rel="noopener">{{ c.instagram }}</a></li>
-      <li><span>SoundCloud</span><a [href]="'https://' + c.soundcloud" target="_blank" rel="noopener">{{ c.soundcloud }}</a></li>
+      <li><span>SoundCloud</span><a [href]="'https://' + c.beatstar" target="_blank" rel="noopener">{{ c.beatstar }}</a></li>
     </ul>
   </section>
 

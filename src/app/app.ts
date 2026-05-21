@@ -16,31 +16,27 @@ export class App {
   constructor(private sanitizer: DomSanitizer) {}
 
   readonly producer = signal({
-    name: 'ZIZ',
-    tagline: 'Producer / Beatmaker / Sound Designer',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=800&fit=crop',
-    bio: `ZIZ is a music producer crafting genre-blending beats that move between
-          hip-hop, electronic, and ambient textures. Over the past five years he
-          has produced for emerging artists across the region and built a
-          signature sound rooted in heavy low-end, cinematic samples, and
-          off-kilter drum work.`
+    name: 'SHRPR',
+    tagline: 'Music producer / Beatmaker',
+    image: 'logo.jpg',
+    bio: `Trap producer from Saudi Arabia. Heavy 808s, cinematic samples, and drums that hit different..`
   });
 
   readonly topTracks = signal<Track[]>([
-    { title: 'Midnight Run', youtubeId: 'dQw4w9WgXcQ' },
-    { title: 'Velvet Static', youtubeId: 'kJQP7kiw5Fk' },
-    { title: 'Paper Lanterns', youtubeId: '9bZkp7q19f0' }
+    { title: 'WUNNA NIGHTS', youtubeId: '6oESeUgrI1U' },
+    // { title: 'BLESSED GRIND', youtubeId: 'nkhL64np9c4' },
+    { title: 'LAST CALL', youtubeId: '7NlyPyyfILM' }
   ]);
 
   readonly favTrack = signal<Track>({
-    title: 'Sunset Over Riyadh (favorite)',
-    youtubeId: 'JGwWNGJdvx8'
+    title: 'BLESSED GRIND',
+    youtubeId: 'nkhL64np9c4'
   });
 
   readonly contact = signal({
     email: 'booking@ziz.music',
-    instagram: '@ziz.beats',
-    soundcloud: 'soundcloud.com/ziz'
+    instagram: '@shrpr1',
+    beatstar: 'beatstars.com/Sharpr',
   });
 
   embed(id: string): SafeResourceUrl {
