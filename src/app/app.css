@@ -1,6 +1,6 @@
 :host {
   display: block;
-  background: radial-gradient(circle at top left, #0f1a2e 0%, #050608 60%);
+  background: radial-gradient(circle at top left, #1f1f23 0%, #050608 60%);
   color: #e5e7eb;
   min-height: 100vh;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -24,18 +24,18 @@
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #3b82f6;
-  box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.25);
 }
 
 .hero-text h1 {
   font-size: 3.5rem;
   margin: 0 0 0.25rem;
   letter-spacing: 0.05em;
-  background: linear-gradient(90deg, #60a5fa, #94a3b8);
+  background: linear-gradient(90deg, #ffffff, #94a3b8);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: #fff
 }
 
 .tagline {
@@ -52,9 +52,9 @@
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #60a5fa;
+  color: #ffffff;
   margin-bottom: 1rem;
-  border-bottom: 1px solid rgba(96, 165, 250, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 0.5rem;
 }
 
@@ -80,7 +80,7 @@
 
 .track-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(96, 165, 250, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .track-card.wide {
@@ -135,7 +135,7 @@
 }
 
 .contact-list a {
-  color: #60a5fa;
+  color: #ffffff;
   text-decoration: none;
 }
 

@@ -34,9 +34,9 @@ export class App {
   });
 
   readonly contact = signal({
-    email: 'booking@ziz.music',
+    email: 'abdulaziz.ayaz@hotmail.com',
     instagram: '@shrpr1',
-    beatstar: 'beatstars.com/Sharpr',
+    beatstar: 'Sharpr',
   });
 
   embed(id: string): SafeResourceUrl {
