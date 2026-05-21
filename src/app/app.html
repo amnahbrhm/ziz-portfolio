@@ -1,0 +1,63 @@
+@let p = producer();
+@let fav = favTrack();
+@let c = contact();
+
+<main class="page">
+  <header class="hero">
+    <img class="avatar" [src]="p.image" [alt]="p.name" />
+    <div class="hero-text">
+      <h1>{{ p.name }}</h1>
+      <p class="tagline">{{ p.tagline }}</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>About</h2>
+    <p class="bio">{{ p.bio }}</p>
+  </section>
+
+  <section class="section">
+    <h2>Top 3 Tracks</h2>
+    <div class="track-grid">
+      @for (track of topTracks(); track track.youtubeId) {
+        <article class="track-card">
+          <div class="video-wrap">
+            <iframe
+              [src]="embed(track.youtubeId)"
+              title="{{ track.title }}"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <h3>{{ track.title }}</h3>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="section fav">
+    <h2>Favorite Track</h2>
+    <article class="track-card wide">
+      <div class="video-wrap">
+        <iframe
+          [src]="embed(fav.youtubeId)"
+          [title]="fav.title"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <h3>{{ fav.title }}</h3>
+    </article>
+  </section>
+
+  <section class="section">
+    <h2>Contact</h2>
+    <ul class="contact-list">
+      <li><span>Email</span><a [href]="'mailto:' + c.email">{{ c.email }}</a></li>
+      <li><span>Instagram</span><a [href]="'https://instagram.com/' + c.instagram.replace('@','')" target="_blank" rel="noopener">{{ c.instagram }}</a></li>
+      <li><span>SoundCloud</span><a [href]="'https://' + c.soundcloud" target="_blank" rel="noopener">{{ c.soundcloud }}</a></li>
+    </ul>
+  </section>
+
+  <footer class="footer">© {{ p.name }} — All rights reserved.</footer>
+</main>
